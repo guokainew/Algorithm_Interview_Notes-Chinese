@@ -84,9 +84,9 @@ Index
 **混淆矩阵**
 
 - True Positive(TP)：将正类预测为正类的数量.
-- True Negative(TN)：将负类预测为负类的数量.
-- False Positive(FP)：将负类预测为正类数 → 误报 (Type I error).
-- False Negative(FN)：将正类预测为负类数 → 漏报 (Type II error).
+- True Negative(TN)：将正类预测为负类的数量 → 漏检 (Type II error).
+- False Positive(FP)：将负类预测为正类数 → 误检 (Type I error).
+- False Negative(FN)：将负类预测为负类数.
 
     <div align="center"><img src="../_assets/confusion_matrix.png" height="" /></div>
 
@@ -100,7 +100,8 @@ Index
 >> 在正负样本不平衡的情况下，**准确率**这个评价指标有很大的缺陷。比如在互联网广告里面，点击的数量是很少的，一般只有千分之几，如果用acc，即使全部预测成负类（不点击）acc 也有 99% 以上，没有意义。
     
 **召回率**（recall, sensitivity, true positive rate）
-    <div align="center"><img src="../_assets/TIM截图20180620190555.png" height="" /></div>
+  召回率指的是查全率，定义为检测到的正类/所有的正类 R=TP/TP+TN
+举一个简答的例子：比如做一份卷子，其中召回率（查全率）指的是你做了多少道题，假设有一百道题，你做了80道，召回率就是80%；准确率指的是你做过的题中，正确的有多少，假设你做了80道，作对40道，则准确率为50%。
 
 **F1值**——精确率和召回率的调和均值
     <div align="center"><img src="../_assets/TIM截图20180620191137.png" height="" /></div>
